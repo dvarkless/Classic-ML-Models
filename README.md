@@ -50,7 +50,7 @@ python -m ipykernel install --user --name=classic-ml-models
 
 ## Usage
 1. Prepare a dataset, split it into training data, evaluation input and evaluation answers:  
-python```
+```python
 training_data = np.genfromtxt("datasets/light-train.csv", delimiter=",", filling_values=0)
 evaluation_data = np.genfromtxt("datasets/medium-test.csv", delimiter=",", filling_values=0)
 evaluation_input = evaluation_data_lite[:, 1:]
@@ -62,7 +62,7 @@ datapack = (training_data, evaluation_input, evaluation_answers)
 - The first one is used to create a class instance
 - The second dict passes parameters into model one-by-one. It is used to show 
 how different parameters affect the model's prediction quality
-python```
+```python
 hp = {
     'data_converter': get_plain_data,
     'normalization': True,
@@ -80,7 +80,7 @@ params_to_change = {
 }
 ```
 3. Run the model using a ModelRunner class:  
-```
+```python
 MultilogRunner = ModelRunner(MultilogRegression, defaults=hp, metrics=my_metrics, responsive_bar=True)
 MultilogRunner.run(*datapack, params_to_change, one_vs_one=True)
 ```
