@@ -4,16 +4,15 @@ from model_base import BaseModel
 
 class KnnModel(BaseModel):
     """
-       The model is to the nearest neighbors.
+       The model classifies data using the k nearest neighbors algorithm.
 
        During training, it remembers the training data.
        When predicting, outputs the class of the nearest point for the transmitted
        points from the training data array.
 
        parameters:
-           Arbitrary:
-               data_converter - function-converter for input data
-               k - number of neighbors
+           data_converter - function-converter for input data
+           k - number of neighbors
 
     """
     def __init__(self, custom_params=None) -> None:

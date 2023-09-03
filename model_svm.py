@@ -6,7 +6,7 @@ class SVM_Model(BaseModel):
     """
         A model of a support vector machine for multiclass classification.
 
-        Builds a hyperplane with the maximum distance from points in space,
+        It builds a hyperplane with the maximum distance from points in space,
         dividing the input data into 2 classes.
 
         To classify into 3 or more classes, you need to build several models
@@ -21,17 +21,16 @@ class SVM_Model(BaseModel):
         serve in the form of: [-1, -1, 1, -1], where the unit position is the point class number.
 
         Parameters:
-            Arbitrary:
-                data_converter - function-converter for input data
-                shift_column: bool - use a column of constants to act as additive
-                            for folmula: wx_1 + wx_2 .... + wx_n + b = Y
-                normalization: bool - use normalization for input values
-                num_classes: int - number of classes in dataset
-                learning_rate: float - how fast model will fit
-                batch_size: int - size of mini-datasets to process while fitting.
-                                  helps avoid overfitting
-                epochs: int - count of gradient descent steps for whole dataset
-                regularization: float - regularization strength for loss function
+            data_converter - function-converter for input data
+            shift_column: bool - use a column of constants to act as additive
+                        for folmula: wx_1 + wx_2 .... + wx_n + b = Y
+            normalization: bool - use normalization for input values
+            num_classes: int - number of classes in dataset
+            learning_rate: float - how fast model will fit
+            batch_size: int - size of mini-datasets to process while fitting.
+                              helps avoid overfitting
+            epochs: int - count of gradient descent steps for whole dataset
+            regularization: float - regularization strength for loss function
 
     """
 
