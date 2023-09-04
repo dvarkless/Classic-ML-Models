@@ -3,7 +3,7 @@
 
 # Classic ML models
 
-Custom command line interface for Wallpaper Engine for KDE widget
+A set of classic ML models written from scratch using numpy
 
 [Setup](#Setup-and-run) •
 [Usage](#usage) •
